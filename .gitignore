@@ -1,0 +1,7 @@
+# Ignore any generated files.
+build/
+*.c*
+*.so
+
+# Ignore any cached files.
+*__pycache__
