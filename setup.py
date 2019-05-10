@@ -1,4 +1,4 @@
-import numpy as np   
+import numpy as np
 
 from Cython.Build import cythonize
 from distutils.core import setup
@@ -14,7 +14,9 @@ setup(
     url="https://github.com/brian-todd/CyDTW",
     ext_modules = cythonize([
         'cydtw/*.pyx',
-        'cydtw/common/*.pyx',], compiler_directives={'language_level' : '3'}),
-    include_dirs = [np.get_include()], 
+        'cydtw/common/*.pyx',],
+            compiler_directives={'language_level' : '3'},
+            annotate=True),
+    include_dirs = [np.get_include()],
     package_data=package_data,
 )

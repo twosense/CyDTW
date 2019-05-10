@@ -2,6 +2,7 @@
 build/
 *.c*
 *.so
+*.html
 
 # Ignore any cached files.
 *__pycache__
