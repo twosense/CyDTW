@@ -2,9 +2,13 @@
 Implementation of warping path algorithm.
 '''
 
+cimport cython
+
 import numpy as np
 cimport numpy as np
 
+@cython.boundscheck(False)
+@cython.wraparound(False)
 cdef list compute_warping_path(np.float64_t[:, :] acm, int _size_x, int _size_y):
     '''
     Walk backwards in time through the ACM to determine the optimal warping

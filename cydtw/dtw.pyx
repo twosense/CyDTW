@@ -2,6 +2,8 @@
 Implementation of basic DTW algorithm.
 '''
 
+cimport cython
+
 import numpy as np
 cimport numpy as np
 
@@ -10,6 +12,8 @@ from cydtw.common.paths cimport compute_warping_path
 from cydtw.common.paths cimport compute_warping_path_total_cost
 from cydtw.common.types cimport NUMERIC
 
+@cython.boundscheck(False)
+@cython.wraparound(False)
 cpdef tuple compute(NUMERIC[:] ins_x, NUMERIC[:] ins_y, str dkey = 'euclidean'):
     '''
     Compute basic DTW cost between two time series.
