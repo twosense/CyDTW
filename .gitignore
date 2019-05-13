@@ -6,3 +6,6 @@ build/
 
 # Ignore any cached files.
 *__pycache__
+
+# Ignore pyCharm files
+.idea/
